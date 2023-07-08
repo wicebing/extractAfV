@@ -1,5 +1,5 @@
 import moviepy.editor as mp
-import glob, os, sys, tqdm
+import glob, os, sys, tqdm, time
 
 try:
     videoFilePath = sys.argv[1]
@@ -19,6 +19,8 @@ else:
     print('=== There are no video files ===')
     sys.exit()
 
+start_time = time.time()
+
 for i, v in tqdm.tqdm(enumerate(videoFiles), total=len(videoFiles)):
     videoFile = os.path.join(videoFilePath, v)
     # Define the Video Clip
@@ -28,3 +30,9 @@ for i, v in tqdm.tqdm(enumerate(videoFiles), total=len(videoFiles)):
     audioFileName = v.split('.')[0] + '.mp3'
     clip.audio.write_audiofile(os.path.join(targetAudioFilePath, audioFileName))
     print(f'=== {v} is done ===')
+
+# End time measurement
+end_time = time.time()
+execution_time = end_time - start_time
+
+print(f"Program executed in: {execution_time} seconds.")
