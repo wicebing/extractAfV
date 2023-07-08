@@ -16,4 +16,4 @@ python v2a.py
 or you can set the working File as
 
 python v2a.py ["filePath in your setting"] 
-    such as => python v2a.py 'C:\\Users\\USER\\Downloads\\setVideo'
+    such as => python v2a.py 'C:/Users/USER/Downloads/setVideo'
