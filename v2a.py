@@ -1,7 +1,11 @@
 import moviepy.editor as mp
 import glob, os, sys, tqdm
 
-videoFilePath = 'workVideo'
+try:
+    videoFilePath = sys.argv[1]
+except:
+    videoFilePath = 'workVideo'
+
 targetAudioFilePath = 'propAudio'
 videoFiles = os.listdir(videoFilePath)
 
