@@ -9,6 +9,8 @@ def convert_to_audio(videoFile, targetAudioFilePath):
     # Extracting the Audio from the Video
     audioFileName = os.path.split(videoFile)[1].split('.')[0] + '.mp3'  # Extract only filename from the path
     clip.audio.write_audiofile(os.path.join(targetAudioFilePath, audioFileName))
+    # Close the video file clip
+    clip.close()
     print(f'=== {videoFile} is done ===')
 
 try:
