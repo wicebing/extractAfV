@@ -65,13 +65,13 @@ def main(video_folder_path, max_workers):
 
 if __name__ == "__main__":
     try:
-        video_folder_path = sys.argv[1]
+        video_folder_path = sys.argv[2]
     except IndexError:
         print('No video folder path provided. Using default "workVideo" folder.')
         video_folder_path = 'workVideo'
 
     try:
-        max_workers = int(sys.argv[2])
+        max_workers = int(sys.argv[1])
         max_workers = min(os.cpu_count(), max_workers)
     except (IndexError, ValueError):
         print('Invalid or no value for maximum workers provided. Using default value 1.')

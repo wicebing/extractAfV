@@ -14,12 +14,12 @@ def convert_to_audio(videoFile, targetAudioFilePath):
     print(f'=== {videoFile} is done ===')
 
 try:
-    videoFilePath = sys.argv[1]
+    videoFilePath = sys.argv[2]
 except:
     videoFilePath = 'workVideo'
 
 try:
-    max_workers = sys.argv[2]
+    max_workers = sys.argv[1]
     max_workers = min(os.cpu_count(), int(max_workers))
 except:
     max_workers = 1 # Adjust this to your preference

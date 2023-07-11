@@ -17,3 +17,5 @@ or you can set the working File as
 
 python v2a.py ["filePath in your setting"] 
     such as => python v2a.py 'C:/Users/USER/Downloads/setVideo'
+
+python v2a_s2.py ["cores"] ["filePath in your setting"]
